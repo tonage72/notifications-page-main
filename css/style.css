@@ -23,6 +23,16 @@
 html {
 	font-family: 'Plus Jakarta Sans', sans-serif;
 	font-size: 16px;
+	color: hsl(219, 12%, 42%);
+}
+
+.text-bold {
+	font-weight: 800;
+}
+
+.text-bold-blue {
+	font-weight: 800;
+	color: hsl(219, 85%, 26%);
 }
 
 img {
@@ -43,6 +53,7 @@ header {
 header p:nth-child(1) {
 	font-weight: 800;
 	font-size: 1.3rem;
+	color: black;
 }
 
 .count {
@@ -60,8 +71,10 @@ main {
 	flex-flow: column nowrap;
 	gap: 1rem;
 	background-color: var(--color-white);
+	margin: 0 auto;
 	width: 100%;
 	padding: 1rem;
+	max-width: 900px;
 }
 
 .card {
@@ -74,6 +87,7 @@ main {
 		". response .";
 	padding: 1rem 1rem 1rem 0;
 	border-radius: 1rem;
+	font-size: clamp(15px, 3vw, 20px);
 }
 
 .card img {
@@ -84,6 +98,7 @@ main {
 	grid-area: person-icon;
 }
 
+/* Image of person */
 .card figure:nth-child(1) img {
 	margin: 0 auto;
 }
@@ -99,24 +114,31 @@ main {
 
 .card > figure:nth-child(3) {
 	grid-area: extra-icon;
+	margin: 0 0 0 auto;
 }
 
-.card span {
+/* Name of person */
+.card span:nth-child(1) {
 	font-weight: 800;
+	color: black;
 }
 
 .card .response {
 	grid-area: response;
-	border: 1px solid var(--color-grayish-blue);
-	border-radius: .5ch;
+	border: 1px solid var(--color-light-grayish-blue-2);
+	border-radius: .5rem;
+	margin-top: 1rem;
+	padding: 1rem;
 }
 
 .card-unread {
 	background-color: var(--color-very-light-grayish-blue);
 }
 
+/* Red dot to mark unread messages */
 .card-unread p:nth-child(2)::after {
 	content: "\2022";
+	font-weight: 800;
 	color: var(--color-red);
 }
 
