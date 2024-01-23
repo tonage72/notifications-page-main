@@ -56,6 +56,10 @@ header p:nth-child(1) {
 	color: black;
 }
 
+.mark-all-read {
+	cursor: pointer;
+}
+
 .count {
 	background-color: var(--color-blue);
 	color: white;
