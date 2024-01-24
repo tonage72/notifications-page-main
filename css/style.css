@@ -23,21 +23,28 @@
 html {
 	font-family: 'Plus Jakarta Sans', sans-serif;
 	font-size: 16px;
-	color: hsl(219, 12%, 42%);
+	color: var(--color-dark-grayish-blue);
 }
 
 .text-bold {
 	font-weight: 800;
 }
 
-.text-bold-blue {
-	font-weight: 800;
-	color: hsl(219, 85%, 26%);
+.text-blue a {
+	color: var(--color-blue);
+}
+
+.text-general-color a {
+	color: var(--color-dark-grayish-blue);
 }
 
 img {
 	width: 100%;
 	display: block;
+}
+
+a {
+	text-decoration: none;
 }
 
 body {
@@ -123,7 +130,7 @@ main {
 }
 
 /* Name of person */
-.card span:nth-child(1) {
+.card span:nth-child(1) a {
 	font-weight: 800;
 	color: black;
 }
@@ -134,6 +141,7 @@ main {
 	border-radius: .5rem;
 	margin-top: 1rem;
 	padding: 1rem;
+	color: var(--color-dark-grayish-blue);
 }
 
 .card-unread {
@@ -158,4 +166,17 @@ main {
 }
 .attribution a {
 	color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 330px) {
+	header {
+		display: grid;
+		grid-auto-rows: auto;
+	}
+
+	.count {
+		margin: 0;
+		width: 2rem;
+	}
+
 }
